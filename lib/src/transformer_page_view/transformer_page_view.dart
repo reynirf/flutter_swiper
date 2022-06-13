@@ -259,7 +259,7 @@ class TransformerPageView extends StatefulWidget {
     this.itemBuilder,
     this.pageController,
     required this.itemCount,
-  })   : assert(itemCount == 0 || itemBuilder != null || transformer != null),
+  })  : assert(itemCount == 0 || itemBuilder != null || transformer != null),
         duration =
             duration ?? Duration(milliseconds: kDefaultTransactionDuration),
         super(key: key);
@@ -521,7 +521,7 @@ class _TransformerPageViewState extends State<TransformerPageView> {
       }
     }
     if (_transformer != null) {
-      WidgetsBinding.instance!.addPostFrameCallback(_onGetSize);
+      WidgetsBinding.instance.addPostFrameCallback(_onGetSize);
     }
 
     if (_controller != getNotifier()) {
@@ -539,7 +539,7 @@ class _TransformerPageViewState extends State<TransformerPageView> {
   @override
   void didChangeDependencies() {
     if (_transformer != null) {
-      WidgetsBinding.instance!.addPostFrameCallback(_onGetSize);
+      WidgetsBinding.instance.addPostFrameCallback(_onGetSize);
     }
     super.didChangeDependencies();
   }
